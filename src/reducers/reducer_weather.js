@@ -3,6 +3,10 @@ import {FETCH_WEATHER} from '../actions/index';
 //reducers are functions
 
 export default function(state=[], action) {
+  if (action.error) {
+  alert("City not found!");
+  return state;
+  }
 
   switch (action.type) {
     case FETCH_WEATHER:

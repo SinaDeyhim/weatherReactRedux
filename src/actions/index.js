@@ -16,8 +16,8 @@ export function fetchWeather(city){
 
   const url =`${ROOT_URL}&q=${city},ca&units=metric`//&units=metric
 
+//error handling should be done otherwise a typo wil crash the app
   const request = axios.get(url);
-
 
   return {
         type: FETCH_WEATHER,
